@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+  
+<record id="crm_lead_view_form" model="ir.ui.view">
+  <field name="name">crm.lead.view.form</field>
+  <field name="model">crm.lead</field>
+  <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+  <field name="arch" type="xml">
+     <xpath expr="//notebook/page[@name='internal_notes']" position="before">
+
+      <page name="datos_vehiculos" string="Datos del Vehiculo">
+                              <group>
+                                    <group>
+                                        <field name="reg"/>
+                                        <field name="made"/>
+                                        <field name="model"/>
+                                        <field name="year"/>
+                                    </group>
+                                    <group>
+                                        <field name="weight"/>
+                                        <field name="qoute"/>
+                                    </group>
+                              </group>
+        </page>
+    </xpath>
+      
+
+  </field>
+</record>
+  </data>
+</odoo>
